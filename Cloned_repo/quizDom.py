@@ -32,6 +32,7 @@ client = Educhain(llm_config)
 app = Flask(__name__)
 print("test")
 print("test")
+print("test")
 
 @app.route("/generate_questions", methods=["POST"])
 def generate_questions():
