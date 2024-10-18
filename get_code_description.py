@@ -65,4 +65,4 @@ directory_path = 'Cloned_repo'
 for root, dirs, files in os.walk(directory_path):
     for file in files:
         file_path = os.path.join(root, file)
-        process_file(file_path)
+        process_file(file_path) 
