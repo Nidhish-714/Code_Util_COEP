@@ -61,6 +61,11 @@ except Exception as e:
 # # Directory to scan for code files
 # directory_path = 'Cloned_repo'
 
+# Iterate through all files in the directory
+for root, dirs, files in os.walk(directory_path):
+    for file in files:
+        file_path = os.path.join(root, file)
+        process_file(file_path) 
 # # Iterate through all files in the directory
 # for root, dirs, files in os.walk(directory_path):
 #     for file in files:
