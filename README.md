@@ -32,6 +32,83 @@
    - Similar to the previous command, this runs the `generation.py` script. The name suggests that this script is likely responsible for generating some kind of output, which could be anything from generating a report, processing data, or creating a machine learning model, depending on your project.
    - The specifics of what happens in `generation.py` will also depend on its implementation.
 
-### Summary
+### Documentation for Running NodeSync and the Chatbot Frontend
 
-These instructions guide you through setting up a Python project environment, installing necessary packages, and running scripts to start your server and handle data generation. Properly following these steps ensures that you have a clean, isolated environment for your project and that all required dependencies are installed before running the application.
+#### 1. **Running the NodeSync Script**
+The NodeSync script is responsible for syncing between organization repositories and a MongoDB database.
+
+**Steps:**
+
+1. **Navigate to the NodeSync Folder**:
+   Ensure you are in the correct directory where the `node app.js` script resides. This script likely handles the logic for syncing the organization's repositories with MongoDB.
+
+   ```bash
+   cd path/to/nodesync
+   ```
+
+2. **Install Dependencies**:
+   Before running the application, ensure that all the necessary dependencies are installed. If the `package.json` file is present, run the following command to install them:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the NodeSync Script**:
+   To start the synchronization between the organization’s repositories and the MongoDB database, execute the following command:
+
+   ```bash
+   node app.js
+   ```
+
+   - The `app.js` script is responsible for initiating the sync process. It connects to the MongoDB instance and performs the necessary operations on the organization’s repositories.
+   - Make sure the MongoDB service is running, and the database configuration (connection strings, authentication, etc.) is correctly set in your script or environment variables.
+
+---
+
+#### 2. **Running the Chatbot Frontend**
+
+The chatbot frontend resides in the `frontend` folder. Follow these steps to run the UI of the chatbot.
+
+**Steps:**
+
+1. **Navigate to the Frontend Folder**:
+   Ensure you are in the correct directory for the frontend part of the project. The `frontend` folder contains the code for the user interface (UI) of the chatbot.
+
+   ```bash
+   cd path/to/frontend
+   ```
+
+2. **Install Dependencies**:
+   If this is your first time running the frontend, install all necessary dependencies. The `package.json` file should list all required libraries for the frontend application.
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the Frontend (Development Mode)**:
+   To start the chatbot UI in development mode, where you can easily debug and see live updates as you make changes to the code, use the following command:
+
+   ```bash
+   npm run dev
+   ```
+
+   - This command typically starts a development server (such as `webpack-dev-server` or `Vite`) and serves the frontend on a local port (e.g., `http://localhost:3000`).
+   - You can now access the chatbot UI by navigating to the given local address (e.g., `http://localhost:3000`) in your browser.
+
+---
+
+### Summary of Commands
+
+1. **Run NodeSync**:
+   ```bash
+   cd path/to/nodesync
+   npm install
+   node app.js
+   ```
+
+2. **Run Chatbot Frontend**:
+   ```bash
+   cd path/to/frontend
+   npm install
+   npm run dev
+   ```
